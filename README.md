@@ -13,7 +13,7 @@ This project focuses on developing a real-time deepfake detection system to comb
 - [License](#license)
 
 ## Overview
-With the rise of misinformation through manipulated media, real-time deepfake detection is crucial for maintaining online content integrity. This project leverages 3D Convolutional Neural Networks (CNNs) and sequential models like LSTM/GRU to enhance deepfake detection accuracy, achieving a performance improvement of 45% over traditional methods. The project also integrates explainable AI techniques such as Grad-CAM++ and Layer-wise Relevance Propagation (LRP) to offer users insights into the model's decision-making process.
+With the rise of misinformation through manipulated media, real-time deepfake detection is crucial for maintaining online content integrity. This project leverages 3D Convolutional Neural Networks (CNNs) and sequential models like LSTM/GRU to enhance deepfake detection accuracy, achieving a performance improvement  over traditional methods. The project also integrates explainable AI techniques such as Grad-CAM++ and Layer-wise Relevance Propagation (LRP) to offer users insights into the model's decision-making process.
 
 ## Features
 - **Real-time Deepfake Detection:** Processes live video feeds to detect manipulated content.

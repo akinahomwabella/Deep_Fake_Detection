@@ -26,7 +26,7 @@ With the rise of misinformation through manipulated media, real-time deepfake de
 To set up the environment, clone the repository and install the required packages.
 
 
-git clone https://github.com/yourusername/deepfake-detection.git
+git clone https:https://github.com/akinahomwabella/Deep_Fake_Detection/blob/main/Deepfake_Detection_.ipynb
 cd deepfake-detection
 pip install -r requirements.txt
 python scripts/train.py --dataset_path data/DFDC --epochs 50 --batch_size 8

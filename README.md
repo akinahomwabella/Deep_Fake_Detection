@@ -30,7 +30,7 @@ Clone the Repository
 
 bash
 Copy code
-git clone https://github.com/yourusername/deepfake-detection.git
+git clone https://github.com/akinahomwabella/Deep_Fake_Detection/blob/main/Deepfake_Detection_.ipynb
 cd deepfake-detection
 Install Dependencies
 
@@ -59,7 +59,7 @@ Example Notebook
 An example notebook is provided in the notebooks folder to guide you through loading the model, preprocessing frames, and running the detection system on sample videos.
 
  Dataset
-This project uses the Deepfake Detection Challenge (DFDC) dataset, which includes a comprehensive set of real and manipulated videos for training and testing. To use this dataset:
+This project uses the Deepfake Detection Challenge (DFDC) dataset,Face Forensics,Celeb-DF-v2 which includes a comprehensive set of real and manipulated videos for training and testing. To use this dataset:
 
 Visit the DFDC dataset page on Kaggle to download the files.
 Follow the instructions in the notebooks/data_preprocessing.ipynb notebook to preprocess the dataset.

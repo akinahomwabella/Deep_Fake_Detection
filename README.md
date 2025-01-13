@@ -1,33 +1,94 @@
-# Deepfake Detection for Online Misinformation
+# Real-Time Deepfake Detection with Grad-CAM++
 
-This project focuses on developing a real-time deepfake detection system to combat the spread of misinformation using cutting-edge machine learning models and explainable AI techniques. The solution is built with Python, TensorFlow, OpenCV, and Matplotlib and was primarily developed and tested in Google Colab.
+This project implements a **real-time deepfake detection system** using a **CNN-LSTM model** and integrates **Grad-CAM++** for visualizing the regions influencing the model's predictions. The system is capable of processing video streams (webcam or file-based) to classify frames as either "Real" or "Deepfake" with explainable AI insights.
+
+---
 
 ## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Results and Visualization](#results-and-visualization)
-- [Future Work](#future-work)
-- [License](#license)
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Project Details](#project-details)
+5. [Dependencies](#dependencies)
+6. [Results](#results)
+7. [Future Work](#future-work)
+8. [License](#license)
 
-## Overview
-With the rise of misinformation through manipulated media, real-time deepfake detection is crucial for maintaining online content integrity. This project leverages 3D Convolutional Neural Networks (CNNs) and sequential models like LSTM/GRU to enhance deepfake detection accuracy, achieving a performance improvement  over traditional methods. The project also integrates explainable AI techniques such as Grad-CAM++ and Layer-wise Relevance Propagation (LRP) to offer users insights into the model's decision-making process.
+---
 
 ## Features
-- **Real-time Deepfake Detection:** Processes live video feeds to detect manipulated content.
-- **Explainable AI:** Utilizes Grad-CAM++ and Layer-wise Relevance Propagation (LRP) to highlight regions in each frame contributing to the prediction.
-- **Webcam Demo:** Live demo setup for real-time video analysis and heatmap visualization, emphasizing model interpretability.
+- **Real-Time Detection**: Processes live webcam feeds or video files.
+- **Explainable AI**: Generates Grad-CAM++ heatmaps to visualize areas influencing predictions.
+- **Flexibility**: Supports both real-time and offline video processing.
+- **Accurate Predictions**: Uses a pre-trained CNN-LSTM model for sequential frame classification.
 
-## Project Structure
+---
 
 ## Installation
-To set up the environment, clone the repository and install the required packages.
 
+### Prerequisites
+- Python 3.7 or higher
+- OpenCV for video capture and frame processing
+- TensorFlow/Keras for model inference
+- Matplotlib for visualization (optional)
 
-git clone https:https://github.com/akinahomwabella/Deep_Fake_Detection/blob/main/Deepfake_Detection_.ipynb
-cd deepfake-detection
+### Steps
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/your-username/deepfake-detection.git
+    cd deepfake-detection
+    ```
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. Download the pre-trained model `cnn_lstm_final_model.keras` and place it in the project directory.
+
+---
+
+## Usage
+
+### Running the Script
+1. To process a **webcam feed**:
+    ```bash
+    python real_time_detection.py
+    ```
+2. To process a **video file**:
+    Replace `cap = cv2.VideoCapture(0)` with your video file path:
+    ```python
+    cap = cv2.VideoCapture('/path/to/video.mp4')
+    ```
+
+### Grad-CAM++ Heatmap Visualization
+- If a sequence is classified as "Deepfake," the Grad-CAM++ heatmap is displayed in a separate window, highlighting areas of importance in the frame.
+
+### Key Bindings
+- Press **`q`** to quit the real-time detection.
+
+---
+
+## Project Details
+
+### Workflow
+1. **Frame Capture**: Video frames are captured and resized to `224x224`.
+2. **Buffering**: A sequence of 16 frames is maintained for sequential processing.
+3. **Prediction**: The CNN-LSTM model classifies the sequence as "Real" or "Deepfake."
+4. **Explainability**: Grad-CAM++ generates a heatmap for deepfake classifications.
+
+### Model Architecture
+- **CNN Backbone**: EfficientNetB0 for feature extraction.
+- **LSTM**: Processes sequential data for temporal dependencies.
+- **Output Layer**: Binary classification (Real/Deepfake).
+
+---
+
+## Dependencies
+- **Python**: 3.7+
+- **TensorFlow/Keras**: 2.0+
+- **OpenCV**: 4.5+
+- **NumPy**
+- **Matplotlib**
+
+Install dependencies using:
+```bash
 pip install -r requirements.txt
-python scripts/train.py --dataset_path data/DFDC --epochs 50 --batch_size 8
-python scripts/explainable_ai.py --video_path path_to_video.mp4

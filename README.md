@@ -14,6 +14,13 @@ This project implements a **real-time deepfake detection system** using a **CNN-
 7. [Future Work](#future-work)
 8. [License](#license)
 
+--
+Research
+## Research Paper
+This project is supported by the following research paper:
+- [Read the paper on arXiv](https://arxiv.org/abs/your-paper-link)
+- [Download the PDF](docs/deepfake_detection_research_paper.pdf)
+
 ---
 
 ## Features

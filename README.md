@@ -92,3 +92,21 @@ This project implements a **real-time deepfake detection system** using a **CNN-
 Install dependencies using:
 ```bash
 pip install -r requirements.txt
+```
+##Results
+Test Accuracy: 99.5%
+Validation Accuracy: 95.0%
+Explainability: Grad-CAM++ highlights the facial regions used for decision-making.
+
+##Future Work
+Performance Optimization: Improve real-time processing speed with frame skipping and optimized models.
+Multimodal Inputs: Incorporate audio analysis for better deepfake detection.
+Mobile Deployment: Port the model to mobile devices for on-the-go detection.
+
+##License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+##Acknowledgements
+The CNN-LSTM model is inspired by state-of-the-art research in deepfake detection.
+Grad-CAM++ implementation adapted for interpretability in sequential video analysis.
+Dataset sourced from Deepfake Detection Challenge and additional synthetic datasets.
